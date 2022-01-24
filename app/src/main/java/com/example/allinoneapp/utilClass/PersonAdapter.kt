@@ -3,14 +3,10 @@ package com.example.allinoneapp.utilClass
 import android.R
 
 import android.widget.TextView
-
 import androidx.recyclerview.widget.RecyclerView
-
 import android.view.LayoutInflater
 import android.view.View
-
 import android.view.ViewGroup
-
 import androidx.annotation.LayoutRes
 
 

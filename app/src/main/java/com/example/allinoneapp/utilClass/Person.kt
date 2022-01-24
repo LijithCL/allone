@@ -22,7 +22,7 @@ class Person(val firstName: CharSequence, val lastName: CharSequence) :
     }
 
     companion object {
-        private const val NAME_DISPLAY = "%s, %s"
+        private const val NAME_DISPLAY = "%s %s"
     }
 
 

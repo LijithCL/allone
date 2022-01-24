@@ -25,7 +25,7 @@ class StickyHeader : AppCompatActivity() {
         recyclerView = findViewById<View>( com.example.allinoneapp.R.id.recycler_view) as RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        val people: List<Person> = PeopleRepo().getPeople()
+        val people: List<Person> = PeopleRepo().getPeople().sorted()
         recyclerView.adapter = PersonAdapter(people,  com.example.allinoneapp.R.layout.list_item)
 
         val sectionItemDecoration = RecyclerSectionItemDecoration(
@@ -40,12 +40,12 @@ class StickyHeader : AppCompatActivity() {
     private fun getSectionCallback(people: List<Person>): SectionCallback? {
         return object : SectionCallback {
             override fun isSection(position: Int): Boolean {
-                return (position == 0 || people[position].lastName.get(0) !== people[position -1].lastName.get(0))
+                return (position == 0 || people[position].fullName.get(0) !== people[position -1].fullName.get(0))
             }
 
             override fun getSectionHeader(position: Int): CharSequence {
                 return people[position]
-                    .lastName
+                    .fullName
                     .subSequence(
                         0,
                         1
