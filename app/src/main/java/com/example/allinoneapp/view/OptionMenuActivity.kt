@@ -1,12 +1,10 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.allinoneapp.databinding.ActivityMainBinding
 import com.example.allinoneapp.databinding.ActivityOptionMenuBinding
 import android.widget.Toast
 
-import android.R
 import android.graphics.Color
 import android.view.Menu
 import android.view.MenuItem

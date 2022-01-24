@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="50dp"
     android:paddingRight="50dp"
-    tools:context=".SpinnerActivity">
+    tools:context=".view.SpinnerActivity">
 
     <Spinner
         android:id="@+id/spinner"

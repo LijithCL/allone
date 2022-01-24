@@ -1,4 +1,4 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.utilClass
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -226,14 +226,14 @@
                 android:textStyle="bold|italic" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn"
+                android:id="@+id/sticky_header"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:layout_margin="30dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/backgound"
-                android:text="button"
+                android:text="Sticky \nHeader"
                 android:textColor="@color/white"
                 android:textStyle="bold|italic" />
 

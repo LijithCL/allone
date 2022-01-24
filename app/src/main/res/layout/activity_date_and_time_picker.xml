@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Date_and_Time_Picker">
+    tools:context=".view.Date_and_Time_Picker">
 
     <DatePicker
         android:id="@+id/date_picker"

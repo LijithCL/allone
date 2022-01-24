@@ -1,7 +1,6 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.view
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -9,57 +8,32 @@ import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.view.View
-import android.view.ViewGroup
-import android.widget.GridLayout
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.allinoneapp.databinding.ActivityMultipleImagesBinding
+import com.example.allinoneapp.R
 import com.example.allinoneapp.databinding.ActivityPhotoPageBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
-class MultipleImages : AppCompatActivity() {
+class PhotoPage : AppCompatActivity() {
 
     private val STORAGE_REQUEST_CODE = 101
     private val CAMERA_REQUEST_CODE=123;
     private val CAMERA_IMAGE = 1000;
     private val GALLERY_IMAGE = 1001;
-    lateinit var binding: ActivityMultipleImagesBinding
-    var imageView:ImageView?=null
 
-    @SuppressLint("ResourceType")
+    lateinit var binding:ActivityPhotoPageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMultipleImagesBinding.inflate(layoutInflater)
+        binding = ActivityPhotoPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        createImageView()
+        binding.btnImageTake.setOnClickListener {
 
-    }
-
-    private fun createImageView() {
-        imageView= ImageView(this)
-        imageView!!.setImageResource(R.drawable.ic_baseline_add_24)
-        addView(imageView!!, 200, 200)
-    }
-
-    private fun addView(imageView: ImageView, width: Int, height: Int) {
-        val params = LinearLayout.LayoutParams(width, height)
-        params.setMargins(0, 10, 0, 10)
-        imageView.layoutParams = params
-
-        binding.linearlayout.addView(imageView)
-//        var imageId= imageView.id
-        imageView.setOnClickListener {
             setupPermissions()
-
         }
-//        val iconParams: GridLayout.LayoutParams = GridLayout.LayoutParams(
-//            GridLayout.spec(0, 2, GridLayout.CENTER), GridLayout.spec(2, 1)
-//        )
+
     }
 
     private fun showBottomSheetDialog() {
@@ -69,48 +43,44 @@ class MultipleImages : AppCompatActivity() {
 
         bottomSheetDialog.findViewById<ImageView>(R.id.txt_cameraImage)?.setOnClickListener {
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(intent, CAMERA_IMAGE)
+            startActivityForResult(intent,CAMERA_IMAGE)
             bottomSheetDialog.dismiss()
-
         }
 
         bottomSheetDialog.findViewById<ImageView>(R.id.txt_galaryImage)?.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
-            startActivityForResult(intent, GALLERY_IMAGE)
+            startActivityForResult(intent,GALLERY_IMAGE)
             bottomSheetDialog.dismiss()
         }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode==1000) {
             if (resultCode == Activity.RESULT_OK && requestCode == CAMERA_IMAGE && data != null) {
-//                binding.imgImage.setImageBitmap(data.extras!!.get("data") as Bitmap)
-                imageView?.setImageBitmap(data.extras!!.get("data") as Bitmap)
-                createImageView()
+                binding.imgViewPhoto.setImageBitmap(data.extras!!.get("data") as Bitmap)
             }
         }else{
             if (resultCode == Activity.RESULT_OK && requestCode == GALLERY_IMAGE && data != null) {
-//                binding.imgImage.setImageURI(data.data)
-                imageView?.setImageURI(data.data)
-                createImageView()
+                binding.imgViewPhoto.setImageURI(data?.data)
             }
         }
     }
 
     private fun setupPermissions() {
         val storagePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
-        val cameraPermission= ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+        val cameraPermission= ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA)
 
-        if (storagePermission == PackageManager.PERMISSION_GRANTED && cameraPermission== PackageManager.PERMISSION_GRANTED) {
+        if (storagePermission == PackageManager.PERMISSION_GRANTED && cameraPermission==PackageManager.PERMISSION_GRANTED) {
             showBottomSheetDialog()
         }else{
             if (storagePermission != PackageManager.PERMISSION_GRANTED) {
-                storageRequest()
+                    storageRequest()
             }
-            if(cameraPermission!= PackageManager.PERMISSION_GRANTED) {
-                cameraRequest()
+            if(cameraPermission!=PackageManager.PERMISSION_GRANTED) {
+                    cameraRequest()
             }
         }
 
@@ -135,15 +105,14 @@ class MultipleImages : AppCompatActivity() {
 
                 if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
 
-                    Toast.makeText(this,"Permission Denied", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Permission Denied",Toast.LENGTH_SHORT).show()
 
                 } else {
-                    Toast.makeText(this,"Permission Granted", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Permission Granted",Toast.LENGTH_SHORT).show()
 
                 }
             }
         }
     }
-
 
 }

@@ -1,4 +1,4 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.view
 
 import android.content.Intent
 import android.net.Uri

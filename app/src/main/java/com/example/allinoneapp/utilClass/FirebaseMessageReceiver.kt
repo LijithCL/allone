@@ -1,7 +1,5 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.utilClass
 
-import android.annotation.SuppressLint
-import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -11,10 +9,10 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.google.firebase.messaging.FirebaseMessaging
+import com.example.allinoneapp.R
+import com.example.allinoneapp.view.NotificationActivity
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import java.util.*
 
 
 const val channelId="notification channel"
@@ -124,7 +122,7 @@ class FirebaseMessageReceiver : FirebaseMessagingService() {
         createNotificationChannel()
         val channelId = "all_notifications"
         val builder: NotificationCompat.Builder = NotificationCompat.Builder(this,channelId)
-            .setSmallIcon(com.example.allinoneapp.R.drawable.notifications_24)
+            .setSmallIcon(R.drawable.notifications_24)
             .setContentTitle(title)
             .setContentText(message)
             .setAutoCancel(true)

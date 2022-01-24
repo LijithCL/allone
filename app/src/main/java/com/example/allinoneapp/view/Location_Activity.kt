@@ -1,4 +1,4 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.view
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -33,7 +33,7 @@ class Location_Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnFindDirection.setOnClickListener {
-            val intent = Intent(this,DirectionMap::class.java)
+            val intent = Intent(this, DirectionMap::class.java)
             startActivity(intent)
         }
 

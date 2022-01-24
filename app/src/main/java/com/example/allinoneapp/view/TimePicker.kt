@@ -1,4 +1,4 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

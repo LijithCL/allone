@@ -1,4 +1,4 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.utilClass
 
 import android.app.AlertDialog
 import android.content.IntentFilter
@@ -6,8 +6,10 @@ import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.allinoneapp.R
 
-class BroadcastNetconnecionStatus : AppCompatActivity(), ConnectivityReceiver.ConnectivityReceiverListener {
+class BroadcastNetconnecionStatus : AppCompatActivity(),
+    ConnectivityReceiver.ConnectivityReceiverListener {
 
     private lateinit var alertDialog: AlertDialog
     override fun onCreate(savedInstanceState: Bundle?) {

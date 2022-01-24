@@ -1,4 +1,4 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.view
 
 import android.content.BroadcastReceiver
 import android.content.Context

@@ -20,9 +20,8 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -32,37 +31,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneApp">
         <activity
-            android:name=".SensorActivity"
+            android:name=".view.StickyHeader"
             android:exported="true" />
         <activity
-            android:name=".OptionMenuActivity"
+            android:name=".view.SensorActivity"
             android:exported="true" />
         <activity
-            android:name=".SpinnerActivity"
+            android:name=".view.OptionMenuActivity"
             android:exported="true" />
         <activity
-            android:name=".SystemConnectivity"
+            android:name=".view.SpinnerActivity"
             android:exported="true" />
         <activity
-            android:name=".NotificationActivity"
+            android:name=".view.SystemConnectivity"
             android:exported="true" />
         <activity
-            android:name=".AlarmActivity"
+            android:name=".view.NotificationActivity"
             android:exported="true" />
         <activity
-            android:name=".CallandSMS"
+            android:name=".view.AlarmActivity"
             android:exported="true" />
         <activity
-            android:name=".TimePicker"
+            android:name=".view.CallandSMS"
             android:exported="true" />
         <activity
-            android:name=".Date_and_Time_Picker"
+            android:name=".view.TimePicker"
             android:exported="true" />
         <activity
-            android:name=".BroadcastNetconnecionStatus"
+            android:name=".view.Date_and_Time_Picker"
             android:exported="true" />
         <activity
-            android:name=".WebViewActivity"
+            android:name=".utilClass.BroadcastNetconnecionStatus"
+            android:exported="true" />
+        <activity
+            android:name=".view.WebViewActivity"
             android:exported="true" />
 
         <meta-data
@@ -70,16 +72,16 @@
             android:value="AIzaSyD4KfDcLVjVPatpIKtrPXot024Z4UHVZQ8" />
 
         <activity
-            android:name=".DirectionMap"
+            android:name=".view.DirectionMap"
             android:exported="true" />
         <activity
-            android:name=".Location_Activity"
+            android:name=".view.Location_Activity"
             android:exported="true" />
         <activity
-            android:name=".MultipleImages"
+            android:name=".view.MultipleImages"
             android:exported="true" />
         <activity
-            android:name=".PhotoPage"
+            android:name=".view.PhotoPage"
             android:exported="true" />
         <activity
             android:name=".HomePage"
@@ -92,7 +94,7 @@
         </activity>
 
         <receiver
-            android:name=".ConnectivityReceiver"
+            android:name=".utilClass.ConnectivityReceiver"
             android:enabled="true"
             android:exported="true"
             tools:ignore="IntentFilterExportedReceiver">
@@ -101,12 +103,12 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".Alarm"
+            android:name=".view.Alarm"
             android:enabled="true"
             android:exported="true" />
 
         <service
-            android:name=".FirebaseMessageReceiver"
+            android:name=".utilClass.FirebaseMessageReceiver"
             android:enabled="true"
             android:exported="false"
             tools:ignore="Instantiatable">
@@ -114,13 +116,12 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service
             android:name=".MyFirebaseInstanceIDService"
-            tools:ignore="Instantiatable"
-            android:exported="false">
+            android:exported="false"
+            tools:ignore="Instantiatable">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
     </application>

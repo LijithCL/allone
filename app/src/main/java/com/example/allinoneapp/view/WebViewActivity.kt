@@ -1,4 +1,4 @@
-package com.example.allinoneapp
+package com.example.allinoneapp.view
 
 import android.R
 import android.app.AlertDialog
@@ -9,8 +9,7 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.allinoneapp.databinding.ActivityWebViewBinding
 import android.content.DialogInterface
-
-
+import com.example.allinoneapp.utilClass.ConnectionStatus
 
 
 class WebViewActivity : AppCompatActivity() {
@@ -29,7 +28,7 @@ class WebViewActivity : AppCompatActivity() {
          myWebView = binding.webView
         myWebView!!.webViewClient = WebViewClient()
 
-        var isConnected :Boolean=ConnectionStatus.call(this)
+        var isConnected :Boolean= ConnectionStatus.call(this)
 
         if(isConnected) {
             myWebView!!.loadUrl("mistershoppie.com")
@@ -61,7 +60,7 @@ class WebViewActivity : AppCompatActivity() {
             .setMessage("Please Check Your Internet Connection")
             .setPositiveButton("Tray Again",
                 DialogInterface.OnClickListener { dialogInterface, i ->
-                    var isConnected :Boolean=ConnectionStatus.call(this)
+                    var isConnected :Boolean= ConnectionStatus.call(this)
                     if(isConnected) {
                         myWebView!!.webViewClient = WebViewClient()
                         myWebView!!.loadUrl("mistershoppie.com")

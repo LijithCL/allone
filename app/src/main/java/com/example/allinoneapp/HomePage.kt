@@ -4,11 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import com.example.allinoneapp.databinding.ActivityMainBinding
+import com.example.allinoneapp.utilClass.BroadcastNetconnecionStatus
+import com.example.allinoneapp.utilClass.MyPeriodicWork
+import com.example.allinoneapp.view.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 import java.util.concurrent.TimeUnit
@@ -28,22 +30,22 @@ class HomePage : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.photo.setOnClickListener {
-            val intent = Intent(this,PhotoPage::class.java)
+            val intent = Intent(this, PhotoPage::class.java)
             startActivity(intent)
         }
 
         binding.btnMutlyImage.setOnClickListener {
-            val intent = Intent(this,MultipleImages::class.java)
+            val intent = Intent(this, MultipleImages::class.java)
             startActivity(intent)
         }
 
         binding.btnLocation.setOnClickListener {
-            val intent = Intent(this,Location_Activity::class.java)
+            val intent = Intent(this, Location_Activity::class.java)
             startActivity(intent)
         }
 
         binding.btnWebView.setOnClickListener {
-            val intent = Intent(this,WebViewActivity::class.java)
+            val intent = Intent(this, WebViewActivity::class.java)
             startActivity(intent)
         }
 
@@ -55,26 +57,26 @@ class HomePage : AppCompatActivity() {
         }
 
         binding.btnBroadNetconnection.setOnClickListener {
-            val intent = Intent(this,BroadcastNetconnecionStatus::class.java)
+            val intent = Intent(this, BroadcastNetconnecionStatus::class.java)
             startActivity(intent)
         }
 
         binding.btnDateAndTimePiker.setOnClickListener {
-            val intent = Intent(this,Date_and_Time_Picker::class.java)
+            val intent = Intent(this, Date_and_Time_Picker::class.java)
             startActivity(intent)
         }
         binding.timePicker.setOnClickListener {
-            val intent = Intent(this,TimePicker::class.java)
+            val intent = Intent(this, TimePicker::class.java)
             startActivity(intent)
         }
 
         binding.callSms.setOnClickListener {
-            val intent = Intent(this,CallandSMS::class.java)
+            val intent = Intent(this, CallandSMS::class.java)
             startActivity(intent)
         }
 
         binding.btnAlarm.setOnClickListener {
-            val intent = Intent(this,AlarmActivity::class.java)
+            val intent = Intent(this, AlarmActivity::class.java)
             startActivity(intent)
         }
 
@@ -112,6 +114,13 @@ class HomePage : AppCompatActivity() {
 
         }
 
+        binding.stickyHeader.setOnClickListener {
+
+            val intent = Intent(this, StickyHeader::class.java)
+            startActivity(intent)
+
+        }
+
 //        Toast.makeText(this,"release variant",Toast.LENGTH_LONG).show()
 
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
@@ -133,7 +142,7 @@ class HomePage : AppCompatActivity() {
         body= intent.getStringExtra("body").toString()
 //        Toast.makeText(this,title,Toast.LENGTH_LONG).show()
 
-        startMainActivity()
+//        startMainActivity()
 
 
     }
