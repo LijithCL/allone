@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "471711177354",
+    "project_id": "allinoneapp-4908b",
+    "storage_bucket": "allinoneapp-4908b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471711177354:android:99a783e57bf2322613eb73",
+        "android_client_info": {
+          "package_name": "com.example.allinoneapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471711177354-dhuc21ujn4jtsoqd7dskacgni0ro0ip7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.allinoneapp",
+            "certificate_hash": "4d6089271bf0ddd2beec2389adc9409d2a68e562"
+          }
+        },
+        {
+          "client_id": "471711177354-ntt15iu2gf5r0cepokj09vqeldu1burh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNyfY7njJwm4bZtmIJ0wGIjrDG6FQ2Eaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471711177354-ntt15iu2gf5r0cepokj09vqeldu1burh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

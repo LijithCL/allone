@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#C16C8B"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="APPLICATION"
+        android:textColor="#670227"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/activity_background"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/photo"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Photo"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_mutly_image"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Multiple \nImages"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_location"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Location"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_web_View"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Web View"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_work_manager"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="work\nmanager"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_broad_netconnection"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="broadcast\ninternet\nconnection"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_date_and_time_piker"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="date picker"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/time_picker"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="time picker"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/call_sms"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="@string/call_amp_sms"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Alarm"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Alarm"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/notification"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="notification"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/open_system_connectivities"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="System\nConnectivity"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_spinner"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Spinner"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_option_menu"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Option Menu"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_sensor"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Sensor"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="button"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+
+        </GridLayout>
+
+    </ScrollView>
+</RelativeLayout>
