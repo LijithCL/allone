@@ -5,14 +5,11 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.allinoneapp.utilClass.*
-import com.example.allinoneapp.utilClass.RecyclerSectionItemDecoration.SectionCallback
-import android.R
-import android.annotation.SuppressLint
-import com.example.allinoneapp.utilClass.PersonAdapter
-
 import com.example.allinoneapp.utilClass.PeopleRepo
+import com.example.allinoneapp.utilClass.Person
+import com.example.allinoneapp.utilClass.PersonAdapter
 import com.example.allinoneapp.utilClass.RecyclerSectionItemDecoration
+import com.example.allinoneapp.utilClass.RecyclerSectionItemDecoration.SectionCallback
 
 
 class StickyHeader : AppCompatActivity() {

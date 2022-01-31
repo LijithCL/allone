@@ -64,7 +64,7 @@ class PhotoPage : AppCompatActivity() {
             }
         }else{
             if (resultCode == Activity.RESULT_OK && requestCode == GALLERY_IMAGE && data != null) {
-                binding.imgViewPhoto.setImageURI(data?.data)
+                binding.imgViewPhoto.setImageURI(data.data)
             }
         }
     }

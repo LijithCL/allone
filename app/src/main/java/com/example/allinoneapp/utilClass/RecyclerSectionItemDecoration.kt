@@ -2,6 +2,7 @@ package com.example.allinoneapp.utilClass
 
 import android.graphics.Canvas
 import android.graphics.Rect
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,6 +44,7 @@ class RecyclerSectionItemDecoration(
             val child = parent.getChildAt(i)
             val position = parent.getChildAdapterPosition(child)
             val title = sectionCallback.getSectionHeader(position)
+//            Log.e("title", title.toString())
             header!!.text = title
             if (previousHeader != title || sectionCallback.isSection(position)) {
                 drawHeader(c, child, headerView)
