@@ -237,6 +237,31 @@
                 android:textColor="@color/white"
                 android:textStyle="bold|italic" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Draw"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="Draw"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_expand_recyclerview"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="expandable\nrecyclerview"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+
 
         </GridLayout>
 

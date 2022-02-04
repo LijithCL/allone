@@ -98,6 +98,6 @@ class RecyclerSectionItemDecoration(
 
     interface SectionCallback {
         fun isSection(position: Int): Boolean
-        fun getSectionHeader(position: Int): CharSequence
+        fun getSectionHeader(position: Int): String
     }
 }

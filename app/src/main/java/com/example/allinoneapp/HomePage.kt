@@ -121,6 +121,21 @@ class HomePage : AppCompatActivity() {
 
         }
 
+        binding.btnDraw.setOnClickListener {
+
+            val intent = Intent(this, DrawAvtivity::class.java)
+            startActivity(intent)
+
+        }
+
+        binding.btnExpandRecyclerview.setOnClickListener {
+
+            val intent = Intent(this, circleAcivity::class.java)
+            startActivity(intent)
+
+        }
+
+
 //        Toast.makeText(this,"release variant",Toast.LENGTH_LONG).show()
 
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
@@ -144,6 +159,10 @@ class HomePage : AppCompatActivity() {
 
 //        startMainActivity()
 
+////        bellow code is used to set two number after decimal point
+//        val number = 0.045
+//        var filterUserPrice: String? = "%.1f".format(number)
+//        Log.e("afterRoundoff"," : $filterUserPrice")
 
     }
 

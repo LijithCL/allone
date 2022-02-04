@@ -3,14 +3,15 @@ package com.example.allinoneapp.utilClass
 import androidx.annotation.NonNull
 import java.util.*
 
-class Person(val firstName: CharSequence, val lastName: CharSequence) :
+class Person(val firstName: CharSequence, val lastName: CharSequence, val date: String) :
     Comparable<Person?> {
     val fullName: String
         get() = java.lang.String.format(
             Locale.getDefault(),
             NAME_DISPLAY,
             lastName,
-            firstName
+            firstName,
+            date
         )
 
     override fun compareTo(other: Person?): Int {

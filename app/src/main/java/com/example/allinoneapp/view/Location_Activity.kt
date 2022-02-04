@@ -24,6 +24,7 @@ import java.util.*
 class Location_Activity : AppCompatActivity() {
 
     lateinit var binding: ActivityLocationBinding
+
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private val LOCATION_REQUEST_CODE = 101
     @SuppressLint("SetTextI18n")

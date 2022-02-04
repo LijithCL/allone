@@ -15,8 +15,10 @@
         <entry key="app/src/main/res/layout-v26/activity_notification.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_alarm.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_calland_sms.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_circle_acivity.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/layout/activity_date_and_time_picker.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_direction_map.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_draw_avtivity.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_multiple_images.xml" value="0.19010416666666666" />
@@ -35,6 +37,7 @@
         <entry key="app/src/main/res/layout/fragment_bottam.xml" value="0.17552083333333332" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/recycler_section_header.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/single_item.xml" value="0.1890625" />
         <entry key="app/src/main/res/menu/menu_list.xml" value="0.19010416666666666" />
       </map>
     </option>

@@ -12,6 +12,7 @@ import android.location.Location
 import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.text.Html
 import android.util.Log
 import android.widget.Toast
@@ -25,10 +26,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.Polyline
-import com.google.android.gms.maps.model.PolylineOptions
+import com.google.android.gms.maps.model.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.libraries.places.api.Places
 import com.google.gson.Gson
@@ -43,7 +41,7 @@ import java.util.*
 
 class DirectionMap : AppCompatActivity(), OnMapReadyCallback {
 
-    lateinit var mMap : GoogleMap
+     var mMap : GoogleMap? =null
     lateinit var supportMapFragment: SupportMapFragment
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     var currentPolyline :Polyline? = null
@@ -53,29 +51,40 @@ class DirectionMap : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_direction_map)
 
-        val ai: ApplicationInfo = applicationContext.packageManager
-            .getApplicationInfo(applicationContext.packageName, PackageManager.GET_META_DATA)
-        val value = ai.metaData["com.google.android.geo.API_KEY"]
-        apiKey = value.toString()
-
-        if (!Places.isInitialized()) {
-            Places.initialize(applicationContext, apiKey)
-        }
+//        val ai: ApplicationInfo = applicationContext.packageManager
+//            .getApplicationInfo(applicationContext.packageName, PackageManager.GET_META_DATA)
+//        val value = ai.metaData["com.google.android.geo.API_KEY"]
+//        apiKey = value.toString()
+//
+//        if (!Places.isInitialized()) {
+//            Places.initialize(applicationContext, apiKey)
+//        }
 
         supportMapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         supportMapFragment.getMapAsync(this)
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
 
-        Teliver.init(this,"c04f467a654b4c37b72f84d4a41bed6d")
-        Teliver.startTrip(TripBuilder("Tracking_Id").build())
-        Teliver.startTracking(TrackingBuilder(MarkerOption("Tracking_Id")).build());
+//        Teliver.init(this,"c04f467a654b4c37b72f84d4a41bed6d")
+//        Teliver.startTrip(TripBuilder("Tracking_Id").build())
+//        Teliver.startTracking(TrackingBuilder(MarkerOption("Tracking_Id")).build());
+
 
 
     }
 
     override fun onMapReady(googleMap: GoogleMap){
+
         getLocation(googleMap)
+
+//        object : CountDownTimer(100000, 1000) {
+//            override fun onTick(millisUntilFinished: Long) {
+//                getLocation(googleMap)
+//            }
+//            override fun onFinish() {
+//
+//            }
+//        }.start()
 
     }
 
@@ -97,15 +106,20 @@ class DirectionMap : AppCompatActivity(), OnMapReadyCallback {
 
 //                val geocoder= Geocoder(this, Locale.getDefault())
 //                val address:List<Address> = geocoder.getFromLocation(location.latitude,location.longitude,1)
-
+//                mMap?.clear()
                 mMap=googleMap
                 val Thrippunithura = LatLng(location.latitude,location.longitude)
-                mMap.addMarker(MarkerOptions().position(Thrippunithura).title("Alignminds"))
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Thrippunithura, 15f))
+                mMap!!.addMarker(MarkerOptions().position(Thrippunithura).title("Alignminds"))
+                mMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(Thrippunithura, 15f))
+
+
+
+
+
+                Log.e("location", location.latitude.toString())
 
                 val kaloor = LatLng(9.995006,76.292173)
-                mMap.addMarker(MarkerOptions().position(kaloor).title("Kaloor"))
-
+                mMap!!.addMarker(MarkerOptions().position(kaloor).title("Kaloor"))
 
                 val urll = getDirectionURL(Thrippunithura, kaloor, apiKey)
                 GetDirection(urll).execute()
@@ -172,7 +186,7 @@ class DirectionMap : AppCompatActivity(), OnMapReadyCallback {
                 lineoption.color(Color.GREEN)
                 lineoption.geodesic(true)
             }
-            mMap.addPolyline(lineoption)
+            mMap?.addPolyline(lineoption)
         }
     }
 
