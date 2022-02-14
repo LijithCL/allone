@@ -3,8 +3,6 @@ package com.example.allinoneapp.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.allinoneapp.R
-import com.example.allinoneapp.databinding.ActivityCallandSmsBinding
 import com.example.allinoneapp.databinding.ActivityCircleAcivityBinding
 import com.example.allinoneapp.model.Language
 import com.example.allinoneapp.utilClass.RvAdapter
@@ -21,7 +19,7 @@ class circleAcivity : AppCompatActivity() {
         binding.rvList.layoutManager = LinearLayoutManager(this)
 
         // attach adapter to the recycler view
-        rvAdapter = RvAdapter(languageList)
+        rvAdapter = RvAdapter(languageList,this)
         binding.rvList.adapter = rvAdapter
 
         // create new objects
@@ -33,6 +31,7 @@ class circleAcivity : AppCompatActivity() {
                     " Java is used in all kind of applications like Mobile Applications (Android is Java based), " +
                     "desktop applications, web applications, client server applications, enterprise applications and many more. ",
             false,
+            false,
             false
         )
         val language2 = Language(
@@ -40,6 +39,7 @@ class circleAcivity : AppCompatActivity() {
             "Kotlin",
             "Kotlin is a statically typed, general-purpose programming language" +
                     " developed by JetBrains, that has built world-class IDEs like IntelliJ IDEA, PhpStorm, Appcode, etc.",
+            false,
             false,
             false
         )
@@ -50,6 +50,7 @@ class circleAcivity : AppCompatActivity() {
                     " Python programming language (latest Python 3) is being used in web development, Machine Learning applications, " +
                     "along with all cutting edge technology in Software Industry.",
             false,
+            false,
             false
         )
         val language4 = Language(
@@ -57,6 +58,7 @@ class circleAcivity : AppCompatActivity() {
             "CPP",
             "C++ is a general purpose programming language and widely used now a days for " +
                     "competitive programming. It has imperative, object-oriented and generic programming features. ",
+            false,
             false,
             false
         )

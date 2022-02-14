@@ -31,6 +31,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneApp">
         <activity
+            android:name=".view.BottomNavigation"
+            android:exported="false" />
+        <activity
             android:name=".view.circleAcivity"
             android:exported="false" />
         <activity

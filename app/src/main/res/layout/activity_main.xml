@@ -261,7 +261,29 @@
                 android:textColor="@color/white"
                 android:textStyle="bold|italic" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_bottom_nav"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="bottom nav"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backgound"
+                android:text="button"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
 
         </GridLayout>
 

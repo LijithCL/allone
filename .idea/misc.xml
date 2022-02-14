@@ -8,12 +8,15 @@
         <entry key="app/src/main/res/drawable/activity_background.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/backgound.xml" value="0.20052083333333334" />
         <entry key="app/src/main/res/drawable/bottom_sheet_background.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search.xml" value="0.136" />
         <entry key="app/src/main/res/drawable/navication_header_border.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/navigation_border.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/plain_border.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/round_image_background.xml" value="0.20625" />
         <entry key="app/src/main/res/layout-v26/activity_notification.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_alarm.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_broadcast_netconnecion_status.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_calland_sms.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_circle_acivity.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/layout/activity_date_and_time_picker.xml" value="0.19010416666666666" />
@@ -35,9 +38,16 @@
         <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/fragment_bottam.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/inner_item.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/messagedialog.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/recycler_section_header.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/single_item.xml" value="0.1890625" />
+        <entry key="app/src/main/res/menu/menu_items.xml" value="0.1890625" />
         <entry key="app/src/main/res/menu/menu_list.xml" value="0.19010416666666666" />
       </map>
     </option>

@@ -16,6 +16,11 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+<!--    <style name="AppThemes" parent="Theme.MaterialComponents">-->
+<!--        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>-->
+
+<!--    </style>-->
+
 
 
 </resources>

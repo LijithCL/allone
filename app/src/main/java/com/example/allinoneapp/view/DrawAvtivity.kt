@@ -3,6 +3,7 @@ package com.example.allinoneapp.view
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
@@ -31,9 +32,16 @@ class DrawAvtivity : AppCompatActivity() {
 
         binding.btnDisplay.setOnClickListener { displayText() }
 
+        binding.btnClear.setOnClickListener { clearText() }
 
 
 
+    }
+
+    private fun clearText() {
+        binding.activityMainRelativeLayout.removeAllViews()
+//        setBackgroundColor(Color.parseColor("#ffffff"))
+//        binding.textImage.text=""
     }
 
     private fun displayText() {
@@ -59,7 +67,7 @@ class DrawAvtivity : AppCompatActivity() {
         for (i in 0 until textBlocks.size()) {
             val textBlock = textBlocks[textBlocks.keyAt(i)]
             imageText = textBlock.value // return string
-            Log.e("Text",imageText)
+            Log.e("Text",textBlock.value)
             binding.textImage.text=imageText
         }
     }
@@ -73,11 +81,13 @@ class DrawAvtivity : AppCompatActivity() {
             Log.e("x axis",xAxis.toString())
             val outerCircle = MyView(applicationContext,10,"#C16C8B",xAxis.toInt(),yAxis.toInt())
             binding.activityMainRelativeLayout.addView(outerCircle)
+
         }
 
         // let the touch event pass on to whoever needs it
         true
     }
+
 
 }
 

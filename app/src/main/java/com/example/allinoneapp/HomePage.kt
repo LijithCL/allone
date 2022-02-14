@@ -135,6 +135,12 @@ class HomePage : AppCompatActivity() {
 
         }
 
+        binding.btnBottomNav.setOnClickListener {
+
+            val intent = Intent(this, BottomNavigation::class.java)
+            startActivity(intent)
+
+        }
 
 //        Toast.makeText(this,"release variant",Toast.LENGTH_LONG).show()
 
@@ -150,6 +156,7 @@ class HomePage : AppCompatActivity() {
             // Log and toast
 //            val msg = getString(R.string.msg_token_fmt, token)
             Log.e("Token",token)
+            Log.e("Token",token)
 //            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
         })
 
@@ -163,6 +170,14 @@ class HomePage : AppCompatActivity() {
 //        val number = 0.045
 //        var filterUserPrice: String? = "%.1f".format(number)
 //        Log.e("afterRoundoff"," : $filterUserPrice")
+
+        var number = 2.20
+        var number1 =number%number.toInt()
+        if(number1==0.0) {
+            Log.e("result", number.toInt().toString())
+        }else{
+            Log.e("result1", String.format("%.2f", number).toDouble().toString())
+        }
 
     }
 
