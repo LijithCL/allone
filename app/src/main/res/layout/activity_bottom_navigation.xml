@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".view.BottomNavigation">
 
+
     <RelativeLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_above="@+id/bottom_app_bar"/>
 
     <TextView
         android:id="@+id/page"

@@ -15,6 +15,7 @@
         <entry key="app/src/main/res/drawable/round_image_background.xml" value="0.20625" />
         <entry key="app/src/main/res/layout-v26/activity_notification.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_alarm.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_bluetooth.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/layout/activity_broadcast_netconnecion_status.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_calland_sms.xml" value="0.19010416666666666" />
@@ -22,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_date_and_time_picker.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_direction_map.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_draw_avtivity.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/activity_hot_spot.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_multiple_images.xml" value="0.19010416666666666" />
@@ -35,6 +37,8 @@
         <entry key="app/src/main/res/layout/activity_time_picker.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_web_view.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_web_view_acticity.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_wi_fi_direct.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/activity_wi_fi_sahre.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/fragment_bottam.xml" value="0.17552083333333332" />

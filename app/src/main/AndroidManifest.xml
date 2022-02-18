@@ -3,9 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.allinoneapp">
 
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -22,6 +26,10 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.TETHER_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
     <application
         android:allowBackup="false"
@@ -30,6 +38,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneApp">
+        <activity
+            android:name=".view.WiFiDirectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.WiFiSahreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.HotSpotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.BluetoothActivity"
+            android:exported="false" />
         <activity
             android:name=".view.BottomNavigation"
             android:exported="false" />
@@ -112,7 +132,16 @@
             </intent-filter>
         </receiver>
         <receiver
+            android:name=".utilClass.WiFiDirectBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <receiver
             android:name=".view.Alarm"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".view.BluetoothActivity"
             android:enabled="true"
             android:exported="true" />
 

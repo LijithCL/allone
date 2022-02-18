@@ -142,6 +142,27 @@ class HomePage : AppCompatActivity() {
 
         }
 
+        binding.btnBluetooth.setOnClickListener {
+
+            val intent = Intent(this, BluetoothActivity::class.java)
+            startActivity(intent)
+
+        }
+
+        binding.btnHotSpot.setOnClickListener {
+
+            val intent = Intent(this, HotSpotActivity::class.java)
+            startActivity(intent)
+
+        }
+
+        binding.btnWifiShare.setOnClickListener {
+
+            val intent = Intent(this, WiFiSahreActivity::class.java)
+            startActivity(intent)
+
+        }
+
 //        Toast.makeText(this,"release variant",Toast.LENGTH_LONG).show()
 
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
