@@ -30,6 +30,8 @@
         android:name="android.permission.TETHER_PRIVILEGED"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="false"
@@ -38,6 +40,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneApp">
+        <activity
+            android:name=".view.SambleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.GalleryViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.GalleryActivity"
+            android:exported="false" />
         <activity
             android:name=".view.WiFiDirectActivity"
             android:exported="false" />

@@ -163,6 +163,21 @@ class HomePage : AppCompatActivity() {
 
         }
 
+        binding.btnGallery.setOnClickListener {
+
+            val intent = Intent(this, GalleryActivity::class.java)
+            startActivity(intent)
+
+        }
+
+        binding.btn.setOnClickListener {
+
+            val intent = Intent(this, SambleActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
 //        Toast.makeText(this,"release variant",Toast.LENGTH_LONG).show()
 
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
@@ -176,7 +191,6 @@ class HomePage : AppCompatActivity() {
 
             // Log and toast
 //            val msg = getString(R.string.msg_token_fmt, token)
-            Log.e("Token",token)
             Log.e("Token",token)
 //            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
         })

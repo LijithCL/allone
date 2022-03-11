@@ -11,7 +11,6 @@ import java.io.File
 import java.io.FileOutputStream
 import java.net.ServerSocket
 
-@SuppressLint("StaticFieldLeak")
 class FileServerAsyncTask(
     private val context: Context,
     private var statusText: TextView
@@ -32,8 +31,7 @@ class FileServerAsyncTask(
              * If this code is reached, a client has connected and transferred data
              * Save the input stream from the client as a JPEG file
              */
-            val f = File(
-                Environment.getExternalStorageDirectory().absolutePath +
+            val f = File(Environment.getExternalStorageDirectory().absolutePath +
                     "/${context.packageName}/wifip2pshared-${System.currentTimeMillis()}.jpg")
             val dirs = File(f.parent)
 
@@ -46,10 +44,6 @@ class FileServerAsyncTask(
             serverSocket.close()
             f.absolutePath
         }
-
-
-
-
     }
 
     private fun File.doesNotExist(): Boolean = !exists()
@@ -60,12 +54,11 @@ class FileServerAsyncTask(
     override fun onPostExecute(result: String?) {
         result?.run {
             statusText.text = "File copied - $result"
-            val intent = Intent(Intent.ACTION_VIEW).apply {
+            val intent = Intent(android.content.Intent.ACTION_VIEW).apply {
                 setDataAndType(Uri.parse("file://$result"), "image/*")
             }
             context.startActivity(intent)
         }
     }
-
-
 }
+

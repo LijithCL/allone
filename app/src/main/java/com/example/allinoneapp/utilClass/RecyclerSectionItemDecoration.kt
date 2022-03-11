@@ -43,7 +43,7 @@ class RecyclerSectionItemDecoration(
         for (i in 0 until parent.childCount) {
             val child = parent.getChildAt(i)
             val position = parent.getChildAdapterPosition(child)
-            val title = sectionCallback.getSectionHeader(position)
+             val title = sectionCallback.getSectionHeader(position)
 //            Log.e("title", title.toString())
             header!!.text = title
             if (previousHeader != title || sectionCallback.isSection(position)) {
