@@ -41,9 +41,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneApp">
         <activity
-            android:name=".view.QRScannerActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.SambleActivity"
             android:exported="false" />
         <activity
@@ -168,13 +165,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
-        <activity
-            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:screenOrientation="fullSensor"
-            tools:replace="android:screenOrientation"
-            android:stateNotNeeded="true"/>
-
     </application>
 
 </manifest>

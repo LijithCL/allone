@@ -89,8 +89,4 @@ dependencies {
     //Library to get URL Meta Data
     implementation 'org.jsoup:jsoup:1.13.1'
 
-    implementation "com.journeyapps:zxing-android-embedded:3.6.0"
-
-    implementation 'com.googlecode.ez-vcard:ez-vcard:0.11.3'
-
 }
