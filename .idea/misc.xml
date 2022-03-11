@@ -7,10 +7,17 @@
         <entry key="app/src/main/res/drawable-v24/border.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/activity_background.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/backgound.xml" value="0.20052083333333334" />
+        <entry key="app/src/main/res/drawable/background_rect.xml" value="0.144" />
         <entry key="app/src/main/res/drawable/bottom_sheet_background.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.144" />
+        <entry key="app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.144" />
+        <entry key="app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.144" />
+        <entry key="app/src/main/res/drawable/ic_baseline_photo_library_24.xml" value="0.144" />
         <entry key="app/src/main/res/drawable/ic_baseline_search.xml" value="0.136" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.144" />
         <entry key="app/src/main/res/drawable/navication_header_border.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/navigation_border.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/notifications_24.xml" value="0.144" />
         <entry key="app/src/main/res/drawable/plain_border.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/round_image_background.xml" value="0.20625" />
         <entry key="app/src/main/res/layout-v26/activity_notification.xml" value="0.1890625" />
@@ -23,6 +30,7 @@
         <entry key="app/src/main/res/layout/activity_date_and_time_picker.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_direction_map.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_draw_avtivity.xml" value="0.1890625" />
+        <entry key="app/src/main/res/layout/activity_gallery_view.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_hot_spot.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
@@ -30,6 +38,7 @@
         <entry key="app/src/main/res/layout/activity_notification.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_option_menu.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_photo_page.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/layout/activity_samble.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_sensor.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_spinner.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_sticky_header.xml" value="0.1890625" />
@@ -40,6 +49,7 @@
         <entry key="app/src/main/res/layout/activity_wi_fi_direct.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_wi_fi_sahre.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/bottom_sheet_barcode_data.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/fragment_bottam.xml" value="0.17552083333333332" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1890625" />
@@ -53,6 +63,7 @@
         <entry key="app/src/main/res/layout/single_item.xml" value="0.1890625" />
         <entry key="app/src/main/res/menu/menu_items.xml" value="0.1890625" />
         <entry key="app/src/main/res/menu/menu_list.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.144" />
       </map>
     </option>
   </component>

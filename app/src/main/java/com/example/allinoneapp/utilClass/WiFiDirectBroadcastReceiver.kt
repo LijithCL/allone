@@ -6,10 +6,12 @@ import android.content.BroadcastReceiver
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
+import android.net.NetworkInfo
 import android.net.wifi.WpsInfo
 import android.net.wifi.p2p.WifiP2pConfig
 import android.net.wifi.p2p.WifiP2pDevice
 import android.net.wifi.p2p.WifiP2pManager
+import android.os.Parcelable
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -63,7 +65,7 @@ class WiFiDirectBroadcastReceiver(
 //                        activity.binding.txtDevice.text= peers.toString()
                         adapter = ArrayAdapter(activity, R.layout.simple_list_item_1,peers)
                         adapter.notifyDataSetChanged()
-                        activity.binding.txtDevice.adapter = adapter
+//                        activity.binding.txtDevice.adapter = adapter
 
                         // If an AdapterView is backed by this data, notify it
                         // of the change. For instance, if you have a ListView of
@@ -73,9 +75,9 @@ class WiFiDirectBroadcastReceiver(
                         // Perform any other updates needed based on the new list of
                         // peers connected to the Wi-Fi P2P network.
                     }
-                    activity.binding.txtDevice.setOnItemClickListener { parent, view, position, id ->
-                        val element =  parent.getItemAtPosition(position) // The item that was clicked
-                        Log.e("item",element.toString())
+//                    activity.binding.txtDevice.setOnItemClickListener { parent, view, position, id ->
+//                        val element =  parent.getItemAtPosition(position) // The item that was clicked
+//                        Log.e("item",element.toString())
                         val device = peers1[0]
 
                         val config = WifiP2pConfig().apply {
@@ -92,6 +94,8 @@ class WiFiDirectBroadcastReceiver(
                                     "Connected.",
                                     Toast.LENGTH_SHORT
                                 ).show()
+                                Log.e("address",device)
+
                             }
 
 
@@ -106,13 +110,13 @@ class WiFiDirectBroadcastReceiver(
 //
                     }
 
-                    if (peers.isEmpty()) {
-                        Log.e(TAG, "No devices found")
-                        return@PeerListListener
-                    }
+//                    if (peers.isEmpty()) {
+//                        Log.e(TAG, "No devices found")
+//                        return@PeerListListener
+//                    }
                 }
 
-                manager.requestPeers(channel, peerListListener)
+//                manager.requestPeers(channel, peerListListener)
 
 //                override fun connect() {
                     // Picking the first device found on the network.
@@ -147,13 +151,22 @@ class WiFiDirectBroadcastReceiver(
 
 
             }
-            WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION -> {
-                // Respond to new connection or disconnections
-            }
-            WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION -> {
-                // Respond to this device's wifi state changing
-
-            }
+//            WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION -> {
+//                // Respond to new connection or disconnections
+//                val networkInfo = intent
+//                    .getParcelableExtra<Parcelable>(WifiP2pManager.EXTRA_NETWORK_INFO) as NetworkInfo?
+//                if (networkInfo!!.isConnected) {
+//                    // we are connected with the other device, request connection
+//                    // info to find group owner IP
+//                    Log.e("info","connection")
+//                }else{
+//                    Log.e("info","error to connection")
+//                }
+//            }
+//            WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION -> {
+//                // Respond to this device's wifi state changing
+//
+//            }
         }
     }
-}
+

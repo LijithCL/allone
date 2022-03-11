@@ -111,13 +111,22 @@ class WiFiSahreActivity : AppCompatActivity() {
                 currentConfig = hotspotReservation!!.wifiConfiguration
                 Log.e(
                     "DANG", """THE PASSWORD IS: ${currentConfig!!.preSharedKey} 
-                    SSID is : ${currentConfig!!.SSID}"""
+                    SSID is : ${currentConfig!!.SSID}
+                   BSSID : ${currentConfig!!.BSSID}
+                    FQDN: ${currentConfig!!.FQDN}
+                       networkId : ${currentConfig!!.networkId}
+                       wepKeys : ${currentConfig!!.wepKeys}
+                       status : ${currentConfig!!.status}
+                       : ${currentConfig!!.httpProxy}
+                       : ${currentConfig!!.providerFriendlyName}
+                       : ${currentConfig!!.wepTxKeyIndex}"""
                 )
                 binding.txtLocalHotSpot.text="Hot Spot : ${currentConfig!!.SSID}\nPassword : ${currentConfig!!.preSharedKey}"
 //                WIFI:S:<SSID>
 //                T:<WPA|WEP|>
 //                P:<password>;;
-                val qrCodeContent = "WIFI:S:"+currentConfig!!.SSID+";T:WPA;P:"+currentConfig!!.preSharedKey+";;"
+//                val qrCodeContent = "WIFI:S:"+currentConfig!!.SSID+";T:WPA;P:"+currentConfig!!.preSharedKey+";;"
+                val qrCodeContent = mutableListOf<String>(currentConfig!!.SSID,currentConfig!!.preSharedKey).toString()
                 val manager = getSystemService(WINDOW_SERVICE) as WindowManager
                 val display: Display = manager.defaultDisplay
                 val point = Point()

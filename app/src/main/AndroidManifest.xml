@@ -30,6 +30,8 @@
         android:name="android.permission.TETHER_PRIVILEGED"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="false"
@@ -38,6 +40,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneApp">
+        <activity
+            android:name=".view.QRScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SambleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.GalleryViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.GalleryActivity"
+            android:exported="false" />
         <activity
             android:name=".view.WiFiDirectActivity"
             android:exported="false" />
@@ -154,6 +168,13 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="android:screenOrientation"
+            android:stateNotNeeded="true"/>
+
     </application>
 
 </manifest>
