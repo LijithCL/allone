@@ -184,6 +184,13 @@ class HomePage : AppCompatActivity() {
 
         }
 
+        binding.btnNavcom.setOnClickListener {
+
+            val intent = Intent(this, navComponentActivity::class.java)
+            startActivity(intent)
+
+        }
+
 
 //        Toast.makeText(this,"release variant",Toast.LENGTH_LONG).show()
 

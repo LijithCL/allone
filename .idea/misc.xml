@@ -35,9 +35,11 @@
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_multiple_images.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_nav_component.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_notification.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_option_menu.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_photo_page.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/layout/activity_qrscanner.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_samble.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/activity_sensor.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_spinner.xml" value="0.19010416666666666" />
