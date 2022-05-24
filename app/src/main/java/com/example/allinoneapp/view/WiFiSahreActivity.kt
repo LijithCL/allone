@@ -146,6 +146,7 @@ class WiFiSahreActivity : AppCompatActivity() {
                     Log.v(TAG, e.toString())
                 }
 
+
             }
 
             override fun onStopped() {

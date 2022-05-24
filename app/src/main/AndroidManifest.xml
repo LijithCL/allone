@@ -41,6 +41,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneApp">
         <activity
+            android:name=".view.IntentActivity"
+            android:exported="false" >
+        <!--SEND INTENT FILTER-->
+        <intent-filter>
+            <action android:name="android.intent.action.SEND"/>
+<!--            <category android:name="android.intent.category.DEFAULT"/>-->
+            <data android:mimeType="text/plain"/>
+        </intent-filter>
+
+        <!--VIEW INTENT FILTER-->
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http"/>
+        </intent-filter>
+        </activity>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.QRScannerActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.navComponentActivity"
             android:exported="false" />
         <activity

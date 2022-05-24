@@ -41,7 +41,7 @@ class SpinnerActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
 
         binding.spinner.adapter = dataAdapter
 
-
+//        binding.spinner.setSelection(2)
     }
 
     override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {

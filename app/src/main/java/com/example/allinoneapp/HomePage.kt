@@ -13,6 +13,7 @@ import com.example.allinoneapp.utilClass.MyPeriodicWork
 import com.example.allinoneapp.view.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
+import org.json.JSONObject
 import java.util.concurrent.TimeUnit
 
 
@@ -191,6 +192,13 @@ class HomePage : AppCompatActivity() {
 
         }
 
+        binding.btnIntent.setOnClickListener {
+
+            val intent = Intent(this, IntentActivity::class.java)
+            startActivity(intent)
+
+        }
+
 
 //        Toast.makeText(this,"release variant",Toast.LENGTH_LONG).show()
 
@@ -228,6 +236,12 @@ class HomePage : AppCompatActivity() {
             Log.e("result1", String.format("%.2f", number).toDouble().toString())
         }
 
+
+        var stringJson = "{\"sessions\": [{\"locations\": [{\"lat\": \"14.2294625\",\"lng\": \"121.1509005\",\"time\": 1560262643000,\"speed\": 0,\"speedLimit\": 0},{\"lat\": \"14.2294576\",\"lng\": \"121.1509498\",\"time\": 1560262713000,\"speed\": 0,\"speedLimit\": 0},{\"lat\": \"14.2294576\",\"lng\": \"121.1509498\",\"time\": 1560262714000,\"speed\": 0,\"speedLimit\": 0}],\"name\": \"1.5645220491E12\"}  ]}"
+        var obj = JSONObject(stringJson)
+        Log.e("json=",obj.toString())
+
+
     }
 
     private fun startMainActivity() {
@@ -248,3 +262,5 @@ class HomePage : AppCompatActivity() {
 
 
 }
+
+//https://tutorialwing.com/implement-android-qr-code-scanner-using-zxing-library-in-kotlin/

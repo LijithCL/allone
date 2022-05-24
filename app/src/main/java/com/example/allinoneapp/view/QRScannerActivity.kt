@@ -2,8 +2,6 @@ package com.example.allinoneapp.view
 
 import android.app.Activity
 import android.content.Intent
-import android.net.wifi.WifiConfiguration
-import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
@@ -11,9 +9,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.allinoneapp.databinding.ActivityQrscannerBinding
 import com.google.zxing.integration.android.IntentIntegrator
-import ezvcard.Ezvcard
-import ezvcard.VCard
-import java.lang.String
+import org.json.JSONObject
 
 
 class QRScannerActivity : AppCompatActivity() {
@@ -24,6 +20,8 @@ class QRScannerActivity : AppCompatActivity() {
         binding= ActivityQrscannerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         mQrResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if(it.resultCode == Activity.RESULT_OK) {
                 val result = IntentIntegrator.parseActivityResult(it.resultCode, it.data)
@@ -32,8 +30,9 @@ class QRScannerActivity : AppCompatActivity() {
                     // Do something with the contents (this is usually a URL)
                     Log.e("QR=",result.contents)
 //                    Log.e("QRP=",result.barcodeImagePath)
-                    val res=result.contents.toCharArray()
-                    Log.e("res", res[0].toString())
+                    binding.txtName.text=result.contents.subSequence(7,24)
+                    binding.txtPassword.text=result.contents.subSequence(33,45)
+
 //                    val wifiConfig = WifiConfiguration()
 //                    wifiConfig.SSID = String.format("\"%s\"", result.contents[0])
 //                    wifiConfig.preSharedKey = String.format("\"%s\"", result.contents[1])
@@ -73,7 +72,7 @@ class QRScannerActivity : AppCompatActivity() {
         // QR Code Format
         scanner.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
         // Set Text Prompt at Bottom of QR code Scanner Activity
-        scanner.setPrompt("QR Code Scanner Prompt Text")
+        scanner.setPrompt("Scan QR Code")
         // Start Scanner (don't use initiateScan() unless if you want to use OnActivityResult)
         mQrResultLauncher.launch(scanner.createScanIntent())
     }
